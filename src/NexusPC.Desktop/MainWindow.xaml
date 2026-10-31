@@ -1,0 +1,27 @@
+<Window x:Class="NexusPC.Desktop.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="NEXUS PC" Height="840" Width="1380" MinHeight="720" MinWidth="1100" WindowStartupLocation="CenterScreen" Background="#0A0A0D" Foreground="#F4F2F4" Loaded="Window_Loaded">
+ <Grid><Grid.ColumnDefinitions><ColumnDefinition Width="245"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+  <Border Grid.Column="0" Background="#101014" BorderBrush="#27242B" BorderThickness="0,0,1,0"><DockPanel Margin="20">
+   <StackPanel DockPanel.Dock="Top" Margin="3,7,0,30"><StackPanel Orientation="Horizontal"><Border Width="34" Height="34" CornerRadius="10" Background="#E5386D"><TextBlock Text="N" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/></Border><StackPanel Margin="11,0,0,0" VerticalAlignment="Center"><TextBlock Text="NEXUS PC" FontSize="16" FontWeight="Bold"/><TextBlock Text="WINDOWS CONTROL" FontSize="9" Foreground="#968E98"/></StackPanel></StackPanel></StackPanel>
+   <StackPanel DockPanel.Dock="Bottom" Margin="0,12,0,0"><Button x:Name="AiStatusButton" Background="#171418" BorderBrush="#33252C" Click="LocalAi_Click" HorizontalContentAlignment="Left"><StackPanel><TextBlock Text="LOCAL AI" FontSize="10" FontWeight="Bold" Foreground="#A29BA4"/><TextBlock x:Name="AiStatus" Text="Bağlantı kontrol ediliyor…" Margin="0,7,0,0" FontSize="12"/><TextBlock Text="127.0.0.1:11434" FontSize="10" Foreground="#817984" Margin="0,3,0,0"/></StackPanel></Button><TextBlock Text="NEXUS PC · 0.1.0" FontSize="10" Foreground="#74819D" Margin="5,14,0,4"/></StackPanel>
+   <StackPanel><TextBlock Text="ÇALIŞMA ALANI" FontSize="10" Foreground="#8D858F" Margin="4,0,0,9"/>
+    <Button x:Name="HomeNav" Tag="home" Content="⌂   Genel Bakış" Click="Navigate_Click" Margin="0,0,0,5"/>
+    <Button x:Name="OptimizeNav" Tag="optimize" Content="◉   Optimizasyon" Click="Navigate_Click" Margin="0,0,0,5"/>
+    <Button x:Name="TweaksNav" Tag="tweaks" Content="⚡   İnce Ayarlar" Click="Navigate_Click" Margin="0,0,0,5"/>
+    <Button x:Name="GamingNav" Tag="gaming" Content="⌁   Oyun" Click="Navigate_Click" Margin="0,0,0,5"/>
+    <Button x:Name="PowerNav" Tag="power" Content="◐   Güç" Click="Navigate_Click" Margin="0,0,0,5"/>
+    <TextBlock Text="ARAÇLAR" FontSize="10" Foreground="#8D858F" Margin="4,22,0,9"/>
+    <Button x:Name="CleanupNav" Tag="cleanup" Content="⌫   Akıllı Temizlik" Click="Navigate_Click" Margin="0,0,0,5"/>
+    <Button x:Name="AppsNav" Tag="apps" Content="▤   Uygulamalar" Click="Navigate_Click" Margin="0,0,0,5"/>
+    <Button x:Name="HistoryNav" Tag="history" Content="▣   Yedekler ve Geçmiş" Click="Navigate_Click" Margin="0,0,0,5"/>
+    <TextBlock Text="YÖNETİM" FontSize="10" Foreground="#8D858F" Margin="4,22,0,9"/>
+    <Button x:Name="AnalysisNav" Tag="analysis" Content="⌕   Sistem Analizi" Click="Navigate_Click" Margin="0,0,0,5"/>
+    <Button x:Name="UpdatesNav" Tag="updates" Content="⬇   Güncellemeler" Click="Navigate_Click" Margin="0,0,0,5"/>
+    <Button x:Name="SettingsNav" Tag="settings" Content="⚙   Ayarlar" Click="Navigate_Click" Margin="0,0,0,5"/>
+   </StackPanel>
+  </DockPanel></Border>
+  <Grid Grid.Column="1" Margin="34,26,34,26"><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/></Grid.RowDefinitions>
+   <Grid Margin="0,0,0,22"><Grid.ColumnDefinitions><ColumnDefinition/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions><StackPanel><TextBlock x:Name="PageKicker" Text="NEXUS PC / KONTROL PANELİ" FontSize="10" FontWeight="Bold" Foreground="#E95B84"/><TextBlock x:Name="PageTitle" Text="Bilgisayarın. Kontrol sende." FontSize="27" FontWeight="SemiBold" Margin="0,7,0,0"/><TextBlock x:Name="PageDescription" Text="Sistemin durumunu gör, değişiklikleri bilinçli seç." Foreground="#A29BA4" Margin="0,5,0,0"/></StackPanel><Button x:Name="RefreshButton" Grid.Column="1" Content="⟳   Yenile" VerticalAlignment="Center" Click="Refresh_Click"/></Grid>
+   <ContentControl x:Name="PageHost" Grid.Row="1"/>
+  </Grid>
+ </Grid>
+</Window>

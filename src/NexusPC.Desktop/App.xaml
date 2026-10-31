@@ -1,0 +1,41 @@
+﻿<Application x:Class="NexusPC.Desktop.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:NexusPC.Desktop"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Foreground" Value="#F4F2F4"/>
+            <Setter Property="Background" Value="#1C171C"/>
+            <Setter Property="BorderBrush" Value="#30272E"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="12,8"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template"><Setter.Value><ControlTemplate TargetType="Button"><Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="8" Padding="{TemplateBinding Padding}"><ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/></Border></ControlTemplate></Setter.Value></Setter>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Background" Value="#19171C"/>
+            <Setter Property="Foreground" Value="#F4F2F4"/>
+            <Setter Property="BorderBrush" Value="#39323A"/>
+            <Setter Property="CaretBrush" Value="#F4F2F4"/>
+            <Setter Property="Padding" Value="8"/>
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="Background" Value="#19171C"/>
+            <Setter Property="Foreground" Value="#F4F2F4"/>
+            <Setter Property="BorderBrush" Value="#39323A"/>
+            <Setter Property="Padding" Value="6"/>
+        </Style>
+        <Style TargetType="ComboBoxItem">
+            <Setter Property="Background" Value="#19171C"/>
+            <Setter Property="Foreground" Value="#F4F2F4"/>
+            <Setter Property="Padding" Value="7,5"/>
+        </Style>
+        <Style TargetType="ListBox">
+            <Setter Property="Background" Value="#19171C"/>
+            <Setter Property="Foreground" Value="#F4F2F4"/>
+            <Setter Property="BorderBrush" Value="#30272E"/>
+        </Style>
+    </Application.Resources>
+</Application>
